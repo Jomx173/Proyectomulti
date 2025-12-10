@@ -1,9 +1,11 @@
+
 type Props = {
   name: string;
   image?: string | null;
+  rating?: number;
 };
 
-export default function PlatformCard({ name, image }: Props) {
+export default function PlatformGameCard({ name, image, rating }: Props) {
   return (
     <div
       style={{
@@ -12,6 +14,7 @@ export default function PlatformCard({ name, image }: Props) {
         borderRadius: "10px",
         width: "250px",
         color: "white",
+        textAlign: "center",
       }}
     >
       <img
@@ -19,8 +22,9 @@ export default function PlatformCard({ name, image }: Props) {
         alt={name}
         style={{ width: "100%", borderRadius: "10px" }}
       />
-
-      <h3>{name}</h3>
+      <h3 style={{ marginTop: "0.5rem" }}>{name}</h3>
+      <p>⭐ Rating: {rating ?? "N/A"}</p>
     </div>
   );
 }
+

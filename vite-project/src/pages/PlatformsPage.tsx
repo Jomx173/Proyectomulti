@@ -68,7 +68,7 @@ export default function PlatformsPage() {
           marginBottom: "1.5rem",
         }}
       >
-        Plataformas Disponibles
+
       </h2>
 
       <PlatformsList />
