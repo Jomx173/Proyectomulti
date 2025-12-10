@@ -5,11 +5,11 @@ export default function Home() {
     <div
       style={{
         width: "100%",
-        height: "100vh",           
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",   
-        alignItems: "center",        
+        justifyContent: "center",
+        alignItems: "center",
         textAlign: "center",
         color: "white",
         gap: "2rem",
@@ -20,10 +20,12 @@ export default function Home() {
       </h1>
 
       <p style={{ fontSize: "1.3rem" }}>
-        Explora Juegos y Consolas usando tu API Key.
+        Explora Juegos, Consolas y Próximos Lanzamientos.
       </p>
 
+      {/* BOTONES */}
       <div style={{ display: "flex", gap: "2rem" }}>
+        {/* Ver Juegos */}
         <Link
           to="/games"
           style={{
@@ -39,6 +41,7 @@ export default function Home() {
           Ver Juegos 🎮
         </Link>
 
+        {/* Ver Plataformas */}
         <Link
           to="/platforms"
           style={{
@@ -52,6 +55,22 @@ export default function Home() {
           }}
         >
           Ver Plataformas 🖥️
+        </Link>
+
+        {/* Nuevo botón: Próximos Juegos */}
+        <Link
+          to="/upcoming"
+          style={{
+            padding: "1rem 2rem",
+            background: "#9b59b6",
+            color: "white",
+            borderRadius: "10px",
+            textDecoration: "none",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+          }}
+        >
+          Próximos Juegos 🎯
         </Link>
       </div>
     </div>
