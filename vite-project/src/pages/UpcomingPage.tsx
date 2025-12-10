@@ -5,7 +5,34 @@ export default function UpcomingPage() {
   const [search, setSearch] = useState("");
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem", color: "white" }}>
+    <div
+      style={{
+        textAlign: "center",
+        padding: "2rem",
+        color: "white",
+        position: "relative",
+      }}
+    >
+      <button
+        onClick={() => (window.location.href = "/")}
+        style={{
+          position: "absolute",
+          left: "20px",
+          top: "20px",
+          background: "rgba(255,255,255,0.15)",
+          color: "white",
+          border: "none",
+          padding: "0.6rem 1.2rem",
+          borderRadius: "8px",
+          cursor: "pointer",
+          fontWeight: 700,
+          fontSize: "1rem",
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        Home
+      </button>
+
       <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
         Próximos Lanzamientos 2025 🎮
       </h1>
@@ -14,7 +41,6 @@ export default function UpcomingPage() {
         Explora los juegos que se lanzarán próximamente este año.
       </p>
 
-      {/* 🔍 Buscador */}
       <input
         type="text"
         placeholder="Buscar próximo juego..."
@@ -32,9 +58,7 @@ export default function UpcomingPage() {
         }}
       />
 
-      {/* Le pasamos el search a la lista */}
       <UpcomingList search={search} />
     </div>
   );
 }
-
