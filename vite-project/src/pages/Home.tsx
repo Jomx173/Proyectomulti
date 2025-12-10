@@ -5,11 +5,11 @@ export default function Home() {
     <div
       style={{
         width: "100%",
-        height: "100vh",           // toda la pantalla REAL
+        height: "100vh",           
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",   // centra vertical
-        alignItems: "center",        // centra horizontal
+        justifyContent: "center",   
+        alignItems: "center",        
         textAlign: "center",
         color: "white",
         gap: "2rem",
@@ -57,8 +57,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-
