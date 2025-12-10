@@ -4,11 +4,7 @@ export default function Home() {
   return (
     <div
       style={{
-<<<<<<< HEAD
-        width: "100vw",
-=======
         width: "100%",
->>>>>>> fc3c6036585b67acce160220739878c6226e8c84
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -34,18 +30,7 @@ export default function Home() {
         Bienvenido a la App RAWG
       </h1>
 
-<<<<<<< HEAD
-      <p
-        style={{
-          fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
-          textShadow: "1px 1px 3px rgba(0,0,0,0.6)",
-        }}
-      >
-        Explora Juegos y Consolas usando tu API Key.
-      </p>
 
-      <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-=======
       <p style={{ fontSize: "1.3rem" }}>
         Explora Juegos, Consolas y Próximos Lanzamientos.
       </p>
@@ -53,7 +38,7 @@ export default function Home() {
       {/* BOTONES */}
       <div style={{ display: "flex", gap: "2rem" }}>
         {/* Ver Juegos */}
->>>>>>> fc3c6036585b67acce160220739878c6226e8c84
+
         <Link
           to="/games"
           style={{
