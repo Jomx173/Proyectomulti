@@ -2,7 +2,22 @@ import PlatformsList from "../components/PlatformsList";
 
 export default function PlatformsPage() {
   return (
-    <div style={{ padding: "2rem", color: "white", position: "relative" }}>
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        padding: "2rem",
+        color: "white",
+        textAlign: "center",
+
+        // Fondo
+        backgroundImage: "url('/img/plataformas.jpg')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto",
+        backgroundPosition: "top left",
+      }}
+    >
+      {/* Botón Home */}
       <button
         onClick={() => (window.location.href = "/")}
         style={{
@@ -23,38 +38,15 @@ export default function PlatformsPage() {
         Home
       </button>
 
-      <div style={{ textAlign: "center", marginTop: "4rem" }}>
-        <h1
-          style={{
-            fontSize: "3rem",
-            fontWeight: "bold",
-            marginBottom: "0.5rem",
-          }}
-        >
+      {/* Encabezado */}
+      <div style={{ marginTop: "4rem" }}>
+        <h1 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
           Plataformas RAWG
         </h1>
-
-        <p
-          style={{
-            color: "#cccccc",
-            fontSize: "1.1rem",
-            marginBottom: "3rem",
-          }}
-        >
+        <p style={{ color: "#cccccc", fontSize: "1.1rem", marginBottom: "3rem" }}>
           Consulta todas las plataformas disponibles en la API de RAWG y obtén información detallada.
         </p>
       </div>
-
-      <h2
-        style={{
-          fontSize: "2.5rem",
-          fontWeight: "bold",
-          marginBottom: "1.5rem",
-        }}
-      >
-      
-      </h2>
-
       <PlatformsList />
     </div>
   );

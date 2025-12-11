@@ -4,13 +4,21 @@ export default function GamesPage() {
   return (
     <div
       style={{
+        position: "relative",
+        color: "white",
+        minHeight: "100vh",
         textAlign: "center",
         padding: "2rem",
-        color: "white",
-        position: "relative",
+
+        // Imagen de fondo
+        backgroundImage: "url(/img/opcion1.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
     >
-      {/* Botón Home arriba a la izquierda */}
+      {/* Botón Home */}
       <button
         onClick={() => (window.location.href = "/")}
         style={{
@@ -31,7 +39,7 @@ export default function GamesPage() {
         Home
       </button>
 
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem", color: "white" }}>
+      <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
         Clasificación de Juegos RAWG
       </h1>
 
@@ -43,4 +51,3 @@ export default function GamesPage() {
     </div>
   );
 }
-

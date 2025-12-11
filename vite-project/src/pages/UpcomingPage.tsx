@@ -7,12 +7,21 @@ export default function UpcomingPage() {
   return (
     <div
       style={{
+        position: "relative",
+        minHeight: "100vh",
         textAlign: "center",
         padding: "2rem",
         color: "white",
-        position: "relative",
+        overflow: "hidden",
+
+        // Fondo tipo patrón SIN ZOOM
+        backgroundImage: "url('/img/proxi.webp')",
+        backgroundRepeat: "repeat",   // se repite
+        backgroundSize: "auto",       // NO se estira ni hace zoom
+        backgroundPosition: "top left",
       }}
     >
+      {/* Botón Home */}
       <button
         onClick={() => (window.location.href = "/")}
         style={{
@@ -33,6 +42,7 @@ export default function UpcomingPage() {
         Home
       </button>
 
+      {/* Encabezado */}
       <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
         Próximos Lanzamientos 2025 🎮
       </h1>
@@ -41,6 +51,7 @@ export default function UpcomingPage() {
         Explora los juegos que se lanzarán próximamente este año.
       </p>
 
+      {/* Input de búsqueda */}
       <input
         type="text"
         placeholder="Buscar próximo juego..."
@@ -58,6 +69,7 @@ export default function UpcomingPage() {
         }}
       />
 
+      {/* Lista de próximos lanzamientos */}
       <UpcomingList search={search} />
     </div>
   );
